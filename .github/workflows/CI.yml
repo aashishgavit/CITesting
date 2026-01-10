@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/airline-ticket-booking:latest .
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/aashish1717/corptimeapp:latest .
 
       - name: Push to Docker
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/airline-ticket-booking:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/aashish1717/corptimeapp:latest
