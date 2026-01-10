@@ -40,9 +40,9 @@ jobs:
         run: |
           docker build \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/app:${{ env.VERSION }} \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/app:latest .
+            -t ${{ secrets.DOCKERHUB_USERNAME }}aashish1717/corptimeapp:latest .
 
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/app:${{ env.VERSION }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}aashish1717/corptimeapp:latest
