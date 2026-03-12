@@ -2,15 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: citesting-deployment
+
 spec:
   replicas: 1
+
   selector:
     matchLabels:
       app: citesting-app
+
   template:
     metadata:
       labels:
         app: citesting-app
+
     spec:
       containers:
         - name: citesting-container
@@ -20,4 +24,3 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: ci
-#              use h2 db for kubernetes deployment
