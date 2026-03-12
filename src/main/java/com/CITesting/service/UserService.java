@@ -4,6 +4,6 @@ import com.CITesting.model.User;
 
 public interface UserService
 {
-    String save(User user);
+    String saveuser(User user);
 
 }

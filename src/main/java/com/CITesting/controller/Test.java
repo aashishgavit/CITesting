@@ -25,7 +25,7 @@ public class Test
     @PostMapping("/save")
     public ResponseEntity<String> addData(@RequestBody User user)
     {
-        userService.save(user);
+        userService.saveuser(user);
         return new ResponseEntity<>("Done" , HttpStatus.CREATED);
     }
 }
